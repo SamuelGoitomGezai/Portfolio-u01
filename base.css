@@ -55,8 +55,39 @@ p {
   gap: 2rem;
   padding: 4rem 0;
 }
+.hero-text {
+  min-width: 0;
+}
 .hero-title {
   margin: 0;
+  font-size: 2.25rem;
+  line-height: 1.2;
+  color: var(--heading-color);
+}
+.hero-name {
+  background: linear-gradient(90deg, #0077b6, #ad1385);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+.hero-portrait {
+  width: 16rem;
+  max-width: 100%;
+  aspect-ratio: 1;
+  flex-shrink: 0;
+  align-self: center;
+  padding: 9px;
+  border-radius: 50%;
+  background: linear-gradient(180deg, #e70faa, #00c0fd);
+}
+.hero-photo {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 40%;
+  border-radius: 50%;
+  filter: grayscale(1);
 }
 .page-content {
   padding: 4rem 0;
@@ -134,5 +165,17 @@ p {
     gap: 2rem;
     font-size: 1.25rem;
     line-height: 1.3;
+  }
+}
+@media (min-width: 1024px) {
+  .hero {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 4rem;
+    padding: 12rem 0 8rem;
+  }
+  .hero-portrait {
+    width: 22.9375rem;
   }
 }
