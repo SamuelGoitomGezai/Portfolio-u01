@@ -12,6 +12,10 @@ body {
   padding: 2rem;
   background-color: var(--background-color);
 }
+h1 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+}
 .nav-list {
   list-style: none;
   margin: 0;
@@ -27,12 +31,25 @@ body {
   color: var(--nav-color);
   text-decoration: none;
 }
+.hero {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 4rem 0;
+}
+.hero-title {
+  margin: 0;
+}
 @media (min-width: 768px) {
+  .hero-title {
+    font-size: 3.625rem;
+    line-height: 4.375rem;
+  }
   .nav-list {
     flex-direction: row;
     justify-content: flex-end;
     gap: 2rem;
-        font-size: 1.25rem;
+    font-size: 1.25rem;
     line-height: 1.3;
   }
 }
