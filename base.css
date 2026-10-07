@@ -3,6 +3,7 @@
   --nav-color: #666666;
   --text-color: #666666;
   --heading-color: #42446e;
+  --border-color: #ebeaed;
 }
 * {
   box-sizing: border-box;
@@ -17,7 +18,8 @@ main {
   max-width: 75rem;
   margin: 0 auto;
 }
-h1 {
+h1,
+h2 {
   font-family: "Poppins", sans-serif;
   font-weight: 700;
 }
@@ -59,12 +61,60 @@ p {
 .page-content {
   padding: 4rem 0;
 }
-.page-title {
+.page-title,
+.section-title {
   margin-top: 0;
   color: var(--heading-color);
 }
+.education,
+.experience {
+  max-width: 44rem;
+  margin-top: 4rem;
+}
+.education .section-title,
+.experience .section-title {
+  margin-bottom: 2.375rem;
+}
+.education-item,
+.experience-item {
+  padding-bottom: 1rem;
+  border-bottom: 2px solid var(--border-color);
+}
+.experience-item + .experience-item {
+  margin-top: 1.5rem;
+}
+.education-title,
+.experience-title {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  letter-spacing: 0.0625rem;
+  color: var(--text-color);
+}
+.education-details,
+.experience-details {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 0 1.5rem;
+  margin-top: 0.25rem;
+}
+.education-details p,
+.experience-details p {
+  margin: 0;
+  font-weight: 500;
+  font-size: 0.75rem;
+  line-height: 1.75rem;
+  letter-spacing: 0.0625rem;
+}
+.experience-details p:last-child {
+  margin-left: auto;
+}
 @media (min-width: 768px) {
-   .page-title {
+     .page-title,
+  .section-title {
     font-size: 2.625rem;
     line-height: 3.25rem;
     letter-spacing: -0.025rem;
