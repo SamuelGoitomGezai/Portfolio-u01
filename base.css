@@ -31,6 +31,10 @@ h1 {
   color: var(--nav-color);
   text-decoration: none;
 }
+.nav-list a:focus-visible {
+  outline: 3px solid var(--nav-color);
+  outline-offset: 4px;
+}
 .hero {
   display: flex;
   flex-direction: column;
@@ -44,6 +48,7 @@ h1 {
   .hero-title {
     font-size: 3.625rem;
     line-height: 4.375rem;
+    letter-spacing: -0.0625rem;
   }
   .nav-list {
     flex-direction: row;
