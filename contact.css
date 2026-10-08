@@ -2,14 +2,6 @@
   --contact-heading-color: #1e0e62;
   --contact-gradient-start: #0077b6;
   --contact-gradient-end: #ad1385;
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-  min-height: 100svh;
-}
-
-.contact-page > header {
-  width: 100%;
 }
 
 .contact-content {
@@ -39,14 +31,12 @@
   font-style: normal;
 }
 
-.contact-email,
-.contact-footer span {
+.contact-email {
   color: var(--contact-gradient-start);
 }
 
 @supports (background-clip: text) or (-webkit-background-clip: text) {
-  .contact-email,
-  .contact-footer span {
+  .contact-email {
     background-image: linear-gradient(
       90deg,
       var(--contact-gradient-start),
@@ -75,23 +65,9 @@
   border-radius: 0.125rem;
 }
 
-.contact-footer {
-  width: 100%;
-  max-width: 75rem;
-  margin: 0 auto;
-  padding-bottom: 0.875rem;
-  text-align: center;
-}
-
-.contact-footer p {
-  margin: 0;
-  font-size: 0.875rem;
-  line-height: 1.625rem;
-}
-
 @media (min-width: 1024px) {
   .contact-content {
-    padding-top: 16.6875rem;
+    padding-top: 12.75rem;
   }
 
   .contact-title,
@@ -104,16 +80,11 @@
   .contact-details {
     margin-top: 0.5625rem;
   }
-
-  .contact-footer p {
-    font-size: 1.125rem;
-  }
 }
 
 /* Behåll texten synlig om användaren väljer ett högkontrastläge. */
 @media (forced-colors: active) {
-  .contact-email,
-  .contact-footer span {
+  .contact-email {
     background-image: none;
     color: CanvasText;
   }
